@@ -55,7 +55,7 @@ function Navigation() {
                                     color: 'white',
                                     display: 'block',
                                     fontWeight: 400,
-                                    fontSize: '1.3rem',
+                                    fontSize: '1.125rem',
                                     textTransform: 'none',
                                 }}
                             >

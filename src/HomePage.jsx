@@ -6,6 +6,7 @@ import { Box, Typography } from '@mui/material';
 // components
 import Navigation from './components/Navigation';
 import UnitSlide from './components/UnitSlide';
+import Services from './components/Services';
 
 function HomePage() {
     return (
@@ -18,6 +19,7 @@ function HomePage() {
                 position: 'relative',
             }}
         >
+            <Navigation />
             <Box
                 sx={{
                     boxSizing: 'border-box',
@@ -37,6 +39,7 @@ function HomePage() {
                     }}
                 />
             </Box>
+
             <Box
                 sx={{
                     boxSizing: 'border-box',
@@ -61,17 +64,22 @@ function HomePage() {
                         fontSize: '1.8rem',
                         fontWeight: '400',
                         color: 'white',
+                        marginBottom: '4rem',
                     }}
                 >{`Suport consultativ în domeniul sanitar-veterinar și siguranța alimentelor`}</Typography>
                 <Box
-                    sx={{ position: 'absolute', bottom: '80px', width: '90%', marginRight: '4rem' }}
+                    sx={{
+                        position: 'absolute',
+                        bottom: '20px',
+                        width: '90%',
+                        marginRight: '4rem',
+                    }}
                 >
                     <UnitSlide />
                 </Box>
             </Box>
             <Box sx={{ width: '100%', maxWidth: '1280px' }}>
-                <Navigation />
-                HomePage HELLO HELLO
+                <Services />
             </Box>
         </Box>
     );
