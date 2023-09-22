@@ -24,12 +24,7 @@ function HomePage() {
                     height: '100vh',
                     maxHeight: '800px',
                     width: '100vw',
-                    border: '5px solid red',
                     overflow: 'hidden',
-                    // backgroundImage: 'url("./cafe.jpg")',
-                    // backgroundSize: 'cover',
-                    // backgroundPosition: 'center',
-                    // backgroundRepeat: 'no-repeat',
                 }}
             >
                 <img
@@ -68,7 +63,9 @@ function HomePage() {
                         color: 'white',
                     }}
                 >{`Suport consultativ în domeniul sanitar-veterinar și siguranța alimentelor`}</Typography>
-                <Box sx={{ position: 'absolute', bottom: '80px', width: '90%' }}>
+                <Box
+                    sx={{ position: 'absolute', bottom: '80px', width: '90%', marginRight: '4rem' }}
+                >
                     <UnitSlide />
                 </Box>
             </Box>

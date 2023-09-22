@@ -46,6 +46,11 @@ function UnitSlide() {
                 <CarouselUnit title={'Abatorizare Animale Păsări'} />
                 <CarouselUnit title={'Cofetărie'} />
                 <CarouselUnit title={'Procesare Carne'} />
+                <CarouselUnit title={'Procesare Pește'} />
+                <CarouselUnit title={'Procesare Laptelui'} />
+                <CarouselUnit
+                    title={'Gospodării Animale Agricole'}
+                />
             </Carousel>
         </Box>
     );

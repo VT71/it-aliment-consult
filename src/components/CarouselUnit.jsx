@@ -3,6 +3,10 @@ import React from 'react';
 // @mui
 import { Box, Typography } from '@mui/material';
 
+// FontAwesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFish, faCow, faTractor } from '@fortawesome/free-solid-svg-icons';
+
 // icons
 import StoreIcon from '@mui/icons-material/Store';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
@@ -41,6 +45,30 @@ function CarouselUnit({ title }) {
             break;
         case 'Procesare Carne':
             icon = <AcUnitIcon sx={iconStyle} />;
+            break;
+        case 'Procesare Pește':
+            icon = (
+                <FontAwesomeIcon
+                    icon={faFish}
+                    style={{ fontSize: '2rem', color: 'white' }}
+                />
+            );
+            break;
+        case 'Procesare Laptelui':
+            icon = (
+                <FontAwesomeIcon
+                    icon={faCow}
+                    style={{ fontSize: '2rem', color: 'white' }}
+                />
+            );
+            break;
+        case 'Gospodării Animale Agricole':
+            icon = (
+                <FontAwesomeIcon
+                    icon={faTractor}
+                    style={{ fontSize: '2rem', color: 'white' }}
+                />
+            );
             break;
         default:
             break;
