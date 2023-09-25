@@ -7,6 +7,7 @@ import { Box, Typography } from '@mui/material';
 import Navigation from './components/Navigation';
 import UnitSlide from './components/UnitSlide';
 import Services from './components/Services';
+import LaboratoryServices from './components/LaboratoryServices';
 
 function HomePage() {
     return (
@@ -78,9 +79,13 @@ function HomePage() {
                     <UnitSlide />
                 </Box>
             </Box>
-            <Box sx={{ width: '100%', maxWidth: '1280px' }}>
+
+            {/* Website Sections */}
+            
                 <Services />
-            </Box>
+
+                <LaboratoryServices />
+            
         </Box>
     );
 }

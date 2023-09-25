@@ -11,10 +11,12 @@ function Services() {
         <Box
             sx={{
                 width: '100%',
+                maxWidth: '1280px',
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
+                marginBottom: '5rem'
             }}
         >
             <Box
@@ -42,14 +44,14 @@ function Services() {
                             fontSize: '3rem',
                             fontWeight: '500',
                         }}
-                    >{`Serviciile Noastre`}</Typography>
+                    >{`Servicii Consultare`}</Typography>
                 </Box>
                 <Service type={'evaluarea-unitatii'} />
                 <Service type={'consultarea-beneficiarului'} />
                 <Service type={'haccp'} />
                 <Service type={'program-igienizare'} />
-                <Service type={'monitorizare-periodica'}/>
-                <Service type={'combatere-daunatori'}/>
+                <Service type={'monitorizare-periodica'} />
+                <Service type={'combatere-daunatori'} />
             </Box>
         </Box>
     );
