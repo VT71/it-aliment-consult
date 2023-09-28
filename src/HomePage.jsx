@@ -8,6 +8,7 @@ import Navigation from './components/Navigation';
 import UnitSlide from './components/UnitSlide';
 import Services from './components/Services';
 import LaboratoryServices from './components/LaboratoryServices';
+import Units from './components/Units';
 
 function HomePage() {
     return (
@@ -81,11 +82,12 @@ function HomePage() {
             </Box>
 
             {/* Website Sections */}
-            
-                <Services />
 
-                <LaboratoryServices />
-            
+            <Services />
+
+            <LaboratoryServices />
+
+            <Units />
         </Box>
     );
 }

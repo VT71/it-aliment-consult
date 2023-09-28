@@ -2,9 +2,11 @@ import React from 'react';
 
 // @mui
 import { Box, Typography } from '@mui/material';
+
+// components
 import LaboratoryService from './LaboratoryService';
 
-function LaboratoryServices() {
+function Units() {
     return (
         <Box
             sx={{
@@ -24,8 +26,6 @@ function LaboratoryServices() {
                     justifyContent: 'space-between',
                     width: '940px',
                     rowGap: '2rem',
-                    boxSizing: 'border-box',
-                    paddingBottom: ' 1rem',
                 }}
             >
                 <Box
@@ -42,14 +42,12 @@ function LaboratoryServices() {
                             fontSize: '3rem',
                             fontWeight: '500',
                         }}
-                    >{`Servicii Laborator`}</Typography>
+                    >{`Tipuri Unități`}</Typography>
                 </Box>
-                <LaboratoryService type={'pasari'} />
-                <LaboratoryService type={'rumegatoare'} />
-                <LaboratoryService type={'suine'} />
+                <Box></Box>
             </Box>
         </Box>
     );
 }
 
-export default LaboratoryServices;
+export default Units;
