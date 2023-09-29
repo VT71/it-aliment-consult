@@ -25,7 +25,7 @@ function LaboratoryServices() {
                     width: '940px',
                     rowGap: '2rem',
                     boxSizing: 'border-box',
-                    paddingBottom: ' 1rem',
+                    paddingBottom: ' 3rem',
                 }}
             >
                 <Box

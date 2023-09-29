@@ -1,10 +1,10 @@
 import React from 'react';
 
 // @mui
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Card } from '@mui/material';
 
 // components
-import LaboratoryService from './LaboratoryService';
+import Unit from './Unit';
 
 function Units() {
     return (
@@ -14,7 +14,8 @@ function Units() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                backgroundColor: '#F6FAFF',
+                boxSizing: 'border-box',
+                paddingBottom: '3rem',
             }}
         >
             <Box
@@ -44,7 +45,40 @@ function Units() {
                         }}
                     >{`Tipuri Unități`}</Typography>
                 </Box>
-                <Box></Box>
+                <Card
+                    sx={{
+                        borderRadius: '8px',
+                        boxSizing: 'border-box',
+                        width: '100%',
+                        height: '494px',
+                        backgroundColor: '#F6FAFF',
+                        display: 'flex',
+                        flexDirection: 'row',
+                    }}
+                >
+                    <Box
+                        sx={{
+                            width: '30%',
+                            height: '100%',
+                            boxSizing: 'border-box',
+                            backgroundColor: 'red',
+                            overflow: 'auto',
+                        }}
+                    >
+                        <Unit />
+                        <Unit />
+                        <Unit />
+                        <Unit />
+                    </Box>
+                    <Box
+                        sx={{
+                            width: '70%',
+                            height: '100%',
+                            boxSizing: 'border-box',
+                            backgroundColor: 'blue',
+                        }}
+                    ></Box>
+                </Card>
             </Box>
         </Box>
     );
