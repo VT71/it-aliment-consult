@@ -22,11 +22,11 @@ function LaboratoryService({ type }) {
             imageUrl = servicesInfo['rumegatoare'].imageUrl;
             tests = servicesInfo['rumegatoare'].tests;
             break;
-            case 'suine':
-                title = servicesInfo['suine'].title;
-                imageUrl = servicesInfo['suine'].imageUrl;
-                tests = servicesInfo['suine'].tests;
-                break;
+        case 'suine':
+            title = servicesInfo['suine'].title;
+            imageUrl = servicesInfo['suine'].imageUrl;
+            tests = servicesInfo['suine'].tests;
+            break;
         default:
             break;
     }
@@ -65,7 +65,7 @@ function LaboratoryService({ type }) {
                         color: (theme) => theme.palette.primary.light,
                         fontSize: '1.5rem',
                         fontWeight: '500',
-                        marginTop: '1.2rem'
+                        marginTop: '1.2rem',
                     }}
                 >
                     {title}
@@ -77,11 +77,11 @@ function LaboratoryService({ type }) {
                         flexDirection: 'column',
                         alignItems: 'center',
                         rowGap: '1.2rem',
-                        marginTop: '1.2rem'
+                        marginTop: '1.2rem',
                     }}
                 >
                     {tests.map((test, index) => (
-                        <Box sx={{ width: '80%' }}>
+                        <Box key={index} sx={{ width: '80%' }}>
                             <Typography key={index} sx={{ fontSize: '1.1rem' }}>
                                 {test}
                             </Typography>

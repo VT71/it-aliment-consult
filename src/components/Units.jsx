@@ -6,7 +6,31 @@ import { Box, Typography, Card } from '@mui/material';
 // components
 import Unit from './Unit';
 
+// redux
+import { useSelector } from 'react-redux';
+
+// lib
+import descriptions from '../lib/unitDescriptions';
+
 function Units() {
+    const selectedUnit = useSelector((state) => state.unit.unit);
+
+    let key = null;
+
+    switch (selectedUnit) {
+        case 'Comerț (Produse Alimentare)':
+            key = 'comertProduseAlimentare';
+            break;
+        case 'Depozitare, Comerț cu ridicata':
+            key = 'depozitareComertRidicata';
+            break;
+        case 'Depozitare, Procesare, Comerț miere':
+            key = 'miere';
+            break;
+        default:
+            break;
+    }
+
     return (
         <Box
             sx={{
@@ -61,23 +85,52 @@ function Units() {
                             width: '30%',
                             height: '100%',
                             boxSizing: 'border-box',
-                            backgroundColor: 'red',
                             overflow: 'auto',
+                            backgroundColor: 'white',
                         }}
                     >
-                        <Unit />
-                        <Unit />
-                        <Unit />
-                        <Unit />
+                        <Unit title={'Comerț (Produse Alimentare)'} />
+                        <Unit title={'Depozitare, Comerț cu ridicata'} />
+                        <Unit title={'Depozitare, Procesare, Comerț miere'} />
                     </Box>
                     <Box
                         sx={{
                             width: '70%',
                             height: '100%',
                             boxSizing: 'border-box',
-                            backgroundColor: 'blue',
+                            padding: '1rem 2rem',
                         }}
-                    ></Box>
+                    >
+                        <Typography
+                            sx={{
+                                fontSize: '1.6rem',
+                                fontWeight: 500,
+                                marginBottom: '1.2rem',
+                            }}
+                        >
+                            {selectedUnit ? selectedUnit : ''}
+                        </Typography>
+                        <ul style={{paddingLeft: '1.5rem'}}>
+                            {key
+                                ? descriptions[key].map(
+                                      (description, index) => {
+                                          return (
+                                              <li>
+                                                  <Typography
+                                                      key={index}
+                                                      sx={{
+                                                          marginBottom: '1rem',
+                                                      }}
+                                                  >
+                                                      {description}
+                                                  </Typography>
+                                              </li>
+                                          );
+                                      }
+                                  )
+                                : ''}
+                        </ul>
+                    </Box>
                 </Card>
             </Box>
         </Box>
