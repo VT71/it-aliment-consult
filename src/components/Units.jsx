@@ -92,6 +92,7 @@ function Units() {
                         <Unit title={'Comerț (Produse Alimentare)'} />
                         <Unit title={'Depozitare, Comerț cu ridicata'} />
                         <Unit title={'Depozitare, Procesare, Comerț miere'} />
+                        <Unit title={'Unități de panificație'} />
                     </Box>
                     <Box
                         sx={{
@@ -110,7 +111,7 @@ function Units() {
                         >
                             {selectedUnit ? selectedUnit : ''}
                         </Typography>
-                        <ul style={{paddingLeft: '1.5rem'}}>
+                        <ul style={{ paddingLeft: '1.5rem' }}>
                             {key
                                 ? descriptions[key].map(
                                       (description, index) => {

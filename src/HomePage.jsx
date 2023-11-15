@@ -32,7 +32,7 @@ function HomePage() {
                 }}
             >
                 <img
-                    src='./cafe.jpg'
+                    src={`${require('./assets/images/cafe.jpg')}`}
                     style={{
                         width: '100%',
                         height: '100%',

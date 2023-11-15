@@ -27,6 +27,9 @@ function Unit({ title }) {
         case 'Depozitare, Procesare, Comerț miere':
             image = './honey.jpg';
             break;
+        case 'Unități de panificație':
+            image = './bakery.jpg';
+            break;
         default:
             break;
     }
