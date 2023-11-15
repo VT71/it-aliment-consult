@@ -35,7 +35,7 @@ function Navigation() {
     return (
         <AppBar
             sx={{
-                position: 'absolute',
+                position: 'fixed',
                 backgroundColor: 'transparent',
                 boxShadow: 'none',
             }}
