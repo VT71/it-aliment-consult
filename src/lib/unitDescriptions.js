@@ -45,6 +45,16 @@ const descriptions = {
         'Evaluarea unității sub aspectul respectării prevederilor legale din domeniul siguranței alimentelor și protecției consumatorului cu stabilirea neconformităților și consultarea Beneficiarului privind remedierea acestora cu emiterea unui raport la solicitare.',
         'Consultarea beneficiarului privind pregătirea unității și depunerea dosarului pentru primirea actului permisiv.',
         'Asigurarea monitorizării periodice al unității în întregime cu toate sectoarele/părți componente sau separat.',
+        'Consultări la necesitate pe anumite subiecte separate',
+        'Instruirea personalului  pe aspecte de igienă, aspecte tehnologice sau elaborarea unei tematici la necesitatea beneficiarului în dependență de locul de muncă a persoanei (spre ex. pe implementarea unui act normativ Lege,  Hotărâri de Guvern, Ordine sau Dispoziții emise de Autoritățile centrale). Modalitatea, tematica și periodicitatea, se discută cu beneficiarul, poate fi o dată pe an sau de două ori pe an, la fel se oferă instruiri pentru personalul nou angajat.',
+        'Elaborarea și implementarea procedurilor bazate pe principiile HACCP, sprijin permanent pentru menținerea acestor proceduri.',
+        'Elaborarea planului de autocontrol în cadrul întreprinderii.',
+        'Elaborarea programelor de control și combatere a dăunătorilor.',
+        'Elaborarea programelor de igienizare și dezinfecție în cadrul întreprinderii.',
+        'Elaborarea proiectelor tehnologice sau modificarea/ajustarea celor existente, consultări privind modificarea/ajustarea proiectelor.',
+        'Consultări privind plasarea pe piața autohtonă și pentru export al mierii de albini, elaborarea etichetei conform legislației Republicii Moldova și țării de destinație.',
+        'Consultări privind certificarea la export al produselor alimentare.',
+        'Colaborarea în baza contractului pe diverse aspecte stabilite.',
     ],
 };
 
