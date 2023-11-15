@@ -19,16 +19,16 @@ function Unit({ title }) {
 
     switch (title) {
         case 'Comerț (Produse Alimentare)':
-            image = './supermarket.jpg';
+            image = 'supermarket.jpg';
             break;
         case 'Depozitare, Comerț cu ridicata':
-            image = './warehouse.jpg';
+            image = 'warehouse.jpg';
             break;
         case 'Depozitare, Procesare, Comerț miere':
-            image = './honey.jpg';
+            image = 'honey.jpg';
             break;
         case 'Unități de panificație':
-            image = './bakery.jpg';
+            image = 'bakery.jpg';
             break;
         default:
             break;
@@ -51,7 +51,10 @@ function Unit({ title }) {
                     height: '100%',
                     backgroundColor: 'white',
                     position: 'relative',
-                    ...(image && {backgroundImage: `url("${image}")`,}),
+                    ...(image && {
+                        backgroundImage: `url("${require('../assets/images/' +
+                            image)}")`,
+                    }),
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',
