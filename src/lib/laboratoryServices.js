@@ -1,7 +1,6 @@
 const servicesInfo = {
     pasari: {
         title: 'Analize Păsări',
-        imageUrl: './pasari.jpg',
         tests: [
             'Hematologie',
             'Bacteriologie',
@@ -12,7 +11,6 @@ const servicesInfo = {
     },
     rumegatoare: {
         title: 'Analize Rumegătoare',
-        imageUrl: './rumegatoare.jpg',
         tests: [
             'Hematologie',
             'Bacteriologie',
@@ -23,7 +21,6 @@ const servicesInfo = {
     },
     suine: {
         title: 'Analize Suine',
-        imageUrl: './suine.jpg',
         tests: [
             'Hematologie',
             'Bacteriologie',

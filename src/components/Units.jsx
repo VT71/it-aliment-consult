@@ -116,7 +116,7 @@ function Units() {
                                 ? descriptions[key].map(
                                       (description, index) => {
                                           return (
-                                              <li>
+                                              <li key={index}>
                                                   <Typography
                                                       key={index}
                                                       sx={{

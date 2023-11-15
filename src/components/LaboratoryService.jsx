@@ -8,23 +8,23 @@ import servicesInfo from '../lib/laboratoryServices';
 
 function LaboratoryService({ type }) {
     let title = null;
-    let imageUrl = null;
+    let imageName = null;
     let tests = null;
 
     switch (type) {
         case 'pasari':
             title = servicesInfo['pasari'].title;
-            imageUrl = servicesInfo['pasari'].imageUrl;
+            imageName = 'pasari.jpg';
             tests = servicesInfo['pasari'].tests;
             break;
         case 'rumegatoare':
             title = servicesInfo['rumegatoare'].title;
-            imageUrl = servicesInfo['rumegatoare'].imageUrl;
+            imageName = 'rumegatoare.jpg';
             tests = servicesInfo['rumegatoare'].tests;
             break;
         case 'suine':
             title = servicesInfo['suine'].title;
-            imageUrl = servicesInfo['suine'].imageUrl;
+            imageName = 'suine.jpg';
             tests = servicesInfo['suine'].tests;
             break;
         default:
@@ -45,7 +45,8 @@ function LaboratoryService({ type }) {
                 sx={{
                     height: '180px',
                     width: '100%',
-                    backgroundImage: `url("${imageUrl}")`,
+                    backgroundImage: `url("${require('../assets/images/' +
+                        imageName)}")`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
