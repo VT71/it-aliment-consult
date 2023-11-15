@@ -113,7 +113,7 @@ function Units() {
                             {selectedUnit ? selectedUnit : ''}
                         </Typography>
                         <ul style={{ paddingLeft: '1.5rem' }}>
-                            {key
+                            {/* {key
                                 ? descriptions[key].map(
                                       (description, index) => {
                                           return (
@@ -130,6 +130,23 @@ function Units() {
                                           );
                                       }
                                   )
+                                : ''} */}
+                            {key && descriptions[key]
+                                ? descriptions[key]
+                                      .split('•')
+                                      .map((item, index) => {
+                                          if (index !== 0) {
+                                              return (
+                                                  <Typography
+                                                      sx={{
+                                                          marginBottom: '1rem',
+                                                      }}
+                                                  >
+                                                      {`• ${item}`}
+                                                  </Typography>
+                                              );
+                                          }
+                                      })
                                 : ''}
                         </ul>
                     </Box>
