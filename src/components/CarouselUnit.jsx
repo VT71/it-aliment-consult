@@ -1,7 +1,7 @@
 import React from 'react';
 
 // @mui
-import { Box, Typography } from '@mui/material';
+import { Box, IconButton, Typography, Button } from '@mui/material';
 
 // FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -25,26 +25,54 @@ function CarouselUnit({ title }) {
 
     switch (title) {
         case 'Comerț':
-            icon = <StoreIcon sx={iconStyle} />;
+            icon = (
+                <IconButton>
+                    <StoreIcon sx={iconStyle} />
+                </IconButton>
+            );
             break;
         case 'Depozitare Comerț cu ridicata':
-            icon = <LocalShippingIcon sx={iconStyle} />;
+            icon = (
+                <IconButton>
+                    <LocalShippingIcon sx={iconStyle} />
+                </IconButton>
+            );
             break;
         case 'Depozitare Procesare Export miere':
-            icon = <HiveIcon sx={iconStyle} />;
+            icon = (
+                <IconButton>
+                    <HiveIcon sx={iconStyle} />
+                </IconButton>
+            );
             break;
         case 'Panificație':
-            icon = <BakeryDiningIcon sx={iconStyle} />;
+            icon = (
+                <IconButton>
+                    <BakeryDiningIcon sx={iconStyle} />
+                </IconButton>
+            );
             break;
         case 'Patiserie':
         case 'Cofetărie':
-            icon = <CakeIcon sx={iconStyle} />;
+            icon = (
+                <IconButton>
+                    <CakeIcon sx={iconStyle} />
+                </IconButton>
+            );
             break;
         case 'Abatorizare Animale Păsări':
-            icon = <FactoryIcon sx={iconStyle} />;
+            icon = (
+                <IconButton>
+                    <FactoryIcon sx={iconStyle} />
+                </IconButton>
+            );
             break;
         case 'Procesare Carne':
-            icon = <AcUnitIcon sx={iconStyle} />;
+            icon = (
+                <IconButton>
+                    <AcUnitIcon sx={iconStyle} />
+                </IconButton>
+            );
             break;
         case 'Procesare Pește':
             icon = (
@@ -87,7 +115,9 @@ function CarouselUnit({ title }) {
             }}
         >
             {icon}
-            <Typography sx={titleStyle}>{title}</Typography>
+            <Button variant='text' sx={{ textTransform: 'none' }}>
+                <Typography sx={titleStyle}>{title}</Typography>
+            </Button>
         </Box>
     );
 }
