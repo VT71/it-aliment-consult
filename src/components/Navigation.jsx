@@ -16,9 +16,9 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
 const pages = [
-    'Servicii Consultare',
-    'Servicii Laborator',
-    'Contact',
+    { title: 'Servicii Consultare', href: './#units-section' },
+    { title: 'Servicii Laborator', href: './#laboratory-section' },
+    { title: 'Contact', href: './#contact-section' },
 ];
 
 function Navigation() {
@@ -62,7 +62,8 @@ function Navigation() {
                     >
                         {pages.map((page) => (
                             <Button
-                                key={page}
+                                key={page.title}
+                                href={page.href}
                                 onClick={handleCloseNavMenu}
                                 sx={{
                                     my: 2,
@@ -73,7 +74,7 @@ function Navigation() {
                                     textTransform: 'none',
                                 }}
                             >
-                                {page}
+                                {page.title}
                             </Button>
                         ))}
                     </Box>
@@ -121,11 +122,12 @@ function Navigation() {
                         >
                             {pages.map((page) => (
                                 <MenuItem
-                                    key={page}
+                                    key={page.title}
+                                    href={page.href}
                                     onClick={handleCloseNavMenu}
                                 >
                                     <Typography textAlign='center'>
-                                        {page}
+                                        {page.title}
                                     </Typography>
                                 </MenuItem>
                             ))}

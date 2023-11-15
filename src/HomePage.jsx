@@ -86,11 +86,11 @@ function HomePage() {
 
             {/* <Services /> */}
 
-            <Units id={'units-section'} />
+            <Units />
 
-            <LaboratoryServices id={'laboratory-section'} />
+            <LaboratoryServices />
 
-            <ContactSection id={'contact-section'} />
+            <ContactSection />
         </Box>
     );
 }

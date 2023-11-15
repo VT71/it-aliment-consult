@@ -7,6 +7,7 @@ import LaboratoryService from './LaboratoryService';
 function LaboratoryServices() {
     return (
         <Box
+            id={'laboratory-section'}
             sx={{
                 width: '100%',
                 display: 'flex',

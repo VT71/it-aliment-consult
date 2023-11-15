@@ -11,6 +11,7 @@ import EmailIcon from '@mui/icons-material/Email';
 function ContactSection() {
     return (
         <Box
+            id={'contact-section'}
             sx={{
                 width: '100%',
                 maxWidth: '1280px',
