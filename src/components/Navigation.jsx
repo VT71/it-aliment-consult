@@ -18,7 +18,6 @@ import AdbIcon from '@mui/icons-material/Adb';
 const pages = [
     'Servicii Consultare',
     'Servicii Laborator',
-    ' Tipuri Unități',
     'Contact',
 ];
 

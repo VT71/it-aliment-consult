@@ -83,11 +83,11 @@ function HomePage() {
 
             {/* Website Sections */}
 
-            <Services />
-
-            <LaboratoryServices />
+            {/* <Services /> */}
 
             <Units />
+
+            <LaboratoryServices />
         </Box>
     );
 }
