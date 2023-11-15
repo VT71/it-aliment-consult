@@ -90,10 +90,25 @@ function Units() {
                             backgroundColor: 'white',
                         }}
                     >
+                        <Unit title={'Alimentație publică'} />
                         <Unit title={'Comerț (Produse Alimentare)'} />
                         <Unit title={'Depozitare, Comerț cu ridicata'} />
                         <Unit title={'Depozitare, Procesare, Comerț miere'} />
-                        <Unit title={'Unități de panificație'} />
+                        <Unit title={'Panificație'} />
+                        <Unit title={'Patiserie'} />
+                        <Unit title={'Cofetărie'} />
+                        <Unit title={'Abatorizare a animalelor/păsărilor'} />
+                        <Unit title={'Procesare carne'} />
+                        <Unit title={'Procesare peste'} />
+                        <Unit title={'Procesare lapte'} />
+                        <Unit
+                            title={
+                                'Gospodării de creștere a animalelor agricole'
+                            }
+                        />
+                        <Unit
+                            title={'Clinici veterinare/Cabinete veterinare'}
+                        />
                     </Box>
                     <Box
                         sx={{
