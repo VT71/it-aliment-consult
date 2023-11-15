@@ -15,7 +15,12 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Servicii Consultare', 'Servicii Laborator', ' Tipuri Unități', 'Contact'];
+const pages = [
+    'Servicii Consultare',
+    'Servicii Laborator',
+    ' Tipuri Unități',
+    'Contact',
+];
 
 function Navigation() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -29,10 +34,20 @@ function Navigation() {
     };
 
     return (
-        <AppBar sx={{ position: 'absolute', backgroundColor: 'transparent', boxShadow: 'none' }}>
+        <AppBar
+            sx={{
+                position: 'absolute',
+                backgroundColor: 'transparent',
+                boxShadow: 'none',
+            }}
+        >
             <Container maxWidth='lg'>
                 <Toolbar disableGutters>
-                    <img src='/logo.png' alt='logo' height='80px' />
+                    <img
+                        src={`${require('../assets/images/logo.png')}`}
+                        alt='logo'
+                        height='36px'
+                    />
                     <Box
                         sx={{
                             flexGrow: 1,
