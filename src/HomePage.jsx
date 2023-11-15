@@ -9,6 +9,7 @@ import UnitSlide from './components/UnitSlide';
 import Services from './components/Services';
 import LaboratoryServices from './components/LaboratoryServices';
 import Units from './components/Units';
+import ContactSection from './components/ContactSection';
 
 function HomePage() {
     return (
@@ -88,6 +89,8 @@ function HomePage() {
             <Units />
 
             <LaboratoryServices />
+
+            <ContactSection />
         </Box>
     );
 }
