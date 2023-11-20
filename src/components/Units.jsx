@@ -18,6 +18,9 @@ function Units() {
     let key = null;
 
     switch (selectedUnit) {
+        case 'Alimentație publică':
+            key = 'alimentatiePublica';
+            break;
         case 'Comerț (Produse Alimentare)':
             key = 'comertProduseAlimentare';
             break;
@@ -27,9 +30,37 @@ function Units() {
         case 'Depozitare, Procesare, Comerț miere':
             key = 'miere';
             break;
+        case 'Panificație':
+            key = 'panificatie';
+            break;
+        case 'Patiserie':
+            key = 'patiserie';
+            break;
+        case 'Cofetărie':
+            key = 'cofetarie';
+            break;
+        case 'Abatorizare a animalelor/păsărilor':
+            key = 'abatoare';
+        case 'Procesare carne':
+            key = 'procesareCarne';
+            break;
+        case 'Procesare peste':
+            key = 'procesarePeste';
+            break;
+        case 'Procesare lapte':
+            key = 'procesareLapte';
+            break;
+        case 'Gospodării de creștere a animalelor agricole':
+            key = 'gospodariiAnimale';
+            break;
+        case 'Clinici veterinare/Cabinete veterinare':
+            key = 'cliniciVeterinare';
+            break;
         default:
             break;
     }
+
+    console.log('...: ' + descriptions[key]);
 
     return (
         <Box
@@ -153,6 +184,7 @@ function Units() {
                                           if (index !== 0) {
                                               return (
                                                   <Typography
+                                                      key={index}
                                                       sx={{
                                                           marginBottom: '1rem',
                                                       }}
