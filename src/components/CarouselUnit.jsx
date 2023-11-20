@@ -24,6 +24,8 @@ function CarouselUnit({ title }) {
     let icon = null;
 
     switch (title) {
+        case 'Alimentație publică':
+
         case 'Comerț':
             icon = (
                 <IconButton>
@@ -76,28 +78,27 @@ function CarouselUnit({ title }) {
             break;
         case 'Procesare Pește':
             icon = (
-                <FontAwesomeIcon
-                    icon={faFish}
-                    style={{ fontSize: '2rem', color: 'white' }}
-                />
+                <IconButton>
+                    <FontAwesomeIcon icon={faFish} style={iconStyle} />
+                </IconButton>
             );
             break;
         case 'Procesare Laptelui':
             icon = (
-                <FontAwesomeIcon
-                    icon={faCow}
-                    style={{ fontSize: '2rem', color: 'white' }}
-                />
+                <IconButton>
+                    <FontAwesomeIcon icon={faCow} style={iconStyle} />
+                </IconButton>
             );
             break;
         case 'Gospodării Animale Agricole':
             icon = (
-                <FontAwesomeIcon
-                    icon={faTractor}
-                    style={{ fontSize: '2rem', color: 'white' }}
-                />
+                <IconButton>
+                    <FontAwesomeIcon icon={faTractor} style={iconStyle} />
+                </IconButton>
             );
             break;
+        case 'Clinici veterinare/Cabinete veterinare':
+
         default:
             break;
     }

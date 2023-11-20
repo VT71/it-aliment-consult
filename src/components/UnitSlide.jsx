@@ -38,6 +38,7 @@ function UnitSlide() {
                 centerMode={true}
                 arrows={false}
             >
+                <CarouselUnit title={'Alimentație publică'} />
                 <CarouselUnit title={'Comerț'} />
                 <CarouselUnit title={'Depozitare Comerț cu ridicata'} />
                 <CarouselUnit title={'Panificație'} />
@@ -48,8 +49,9 @@ function UnitSlide() {
                 <CarouselUnit title={'Procesare Carne'} />
                 <CarouselUnit title={'Procesare Pește'} />
                 <CarouselUnit title={'Procesare Laptelui'} />
+                <CarouselUnit title={'Gospodării Animale Agricole'} />
                 <CarouselUnit
-                    title={'Gospodării Animale Agricole'}
+                    title={'Clinici veterinare/Cabinete veterinare'}
                 />
             </Carousel>
         </Box>

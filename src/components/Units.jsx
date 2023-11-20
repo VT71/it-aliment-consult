@@ -130,7 +130,7 @@ function Units() {
                         <Unit title={'Cofetărie'} />
                         <Unit title={'Abatorizare a animalelor/păsărilor'} />
                         <Unit title={'Procesare carne'} />
-                        <Unit title={'Procesare peste'} />
+                        <Unit title={'Procesare pește'} />
                         <Unit title={'Procesare lapte'} />
                         <Unit
                             title={
