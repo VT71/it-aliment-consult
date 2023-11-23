@@ -14,7 +14,7 @@ function ContactSection() {
             id={'contact-section'}
             sx={{
                 width: '100%',
-                maxWidth: '1280px',
+                // maxWidth: '1280px',
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column',

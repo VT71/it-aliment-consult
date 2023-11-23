@@ -32,12 +32,31 @@ function Navigation() {
         setAnchorElNav(null);
     };
 
+    const handleOnScroll = () => {
+        console.log('yoffset', window.scrollY);
+        // change navigationBar background
+        if (window.scrollY > 200) {
+            document.querySelector('.navigationBar').style.backgroundColor =
+                '#173F73';
+        } else {
+            document.querySelector('.navigationBar').style.backgroundColor =
+                'transparent';
+        }
+    };
+
+    React.useEffect(() => {
+        window.addEventListener('scroll', handleOnScroll);
+        return () => window.removeEventListener('scroll', handleOnScroll);
+    }, []);
+
     return (
         <AppBar
+            className='navigationBar'
             sx={{
                 position: 'fixed',
                 backgroundColor: 'transparent',
                 boxShadow: 'none',
+                transition: 'all 0.5s ease',
             }}
         >
             <Container maxWidth='lg'>
