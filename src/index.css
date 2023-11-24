@@ -8,7 +8,7 @@ html {
 .carousel-container {
     position:static !important;
     /* margin-right: -2.5rem; */
-    /* padding: 0 -5rem; */
+    /* padding-left: 2rem !important; */
     /* margin: 0 5rem; */
     /* overflow: visible !important; */
 }

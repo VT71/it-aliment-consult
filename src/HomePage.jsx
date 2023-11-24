@@ -22,7 +22,7 @@ function HomePage() {
                 position: 'relative',
             }}
         >
-            {/* <Navigation /> */}
+            <Navigation />
             <Box
                 sx={{
                     boxSizing: 'border-box',
@@ -69,8 +69,8 @@ function HomePage() {
                         color: 'white',
                         marginBottom: '4rem',
                     }}
-                >{`Suport consultativ în domeniul sanitar-veterinar și siguranța alimentelor`}</Typography>
-                <Box
+                >{`Suport consultativ în domeniul sanitar-veterinar și siguranței alimentelor`}</Typography>
+                <Box 
                     sx={{
                         position: 'absolute',
                         bottom: '20px',
