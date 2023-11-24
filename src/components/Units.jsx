@@ -60,8 +60,6 @@ function Units() {
             break;
     }
 
-    console.log('...: ' + descriptions[key]);
-
     return (
         <Box
             id={'units-section'}
@@ -81,7 +79,8 @@ function Units() {
                     flexWrap: 'wrap',
                     alignItems: 'start',
                     justifyContent: 'space-between',
-                    width: '940px',
+                    width: '100%',
+                    maxWidth: '940px',
                     rowGap: '2rem',
                 }}
             >

@@ -30,7 +30,8 @@ function ContactSection() {
                     flexWrap: 'wrap',
                     alignItems: 'start',
                     justifyContent: 'space-between',
-                    width: '940px',
+                    width: '100%',
+                    maxWidth: '940px',
                     rowGap: '2rem',
                 }}
             >

@@ -22,7 +22,7 @@ function HomePage() {
                 position: 'relative',
             }}
         >
-            <Navigation />
+            {/* <Navigation /> */}
             <Box
                 sx={{
                     boxSizing: 'border-box',

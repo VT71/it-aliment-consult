@@ -6,7 +6,10 @@ import 'react-multi-carousel/lib/styles.css';
 
 // @mui
 import CarouselUnit from './CarouselUnit';
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
+
+// css
+import '../index.css';
 
 const responsive = {
     superLargeDesktop: {
@@ -28,6 +31,30 @@ const responsive = {
     },
 };
 
+const CustomRightArrow = ({ onClick, ...rest }) => {
+    const {
+        onMove,
+        carouselState: { currentSlide, deviceType },
+    } = rest;
+    // onMove means if dragging or swiping in progress.
+    return (
+        <Button
+            sx={{
+                position: 'absolute',
+                right: '-3rem',
+                zIndex: '10',
+                // top: '1/2',
+                // right: '4',
+                // minWidth: '4',
+                cursor: 'pointer',
+            }}
+            onClick={() => onClick()}
+        >
+            HOHOHO
+        </Button>
+    );
+};
+
 function UnitSlide() {
     return (
         <Box sx={{ width: '100%' }}>
@@ -36,7 +63,10 @@ function UnitSlide() {
                 infinite={true}
                 autoPlay={true}
                 centerMode={true}
-                arrows={false}
+                itemClass='carousel-item'
+                containerClass='carousel-container'
+                // arrows={false}
+                customRightArrow={<CustomRightArrow />}
             >
                 <CarouselUnit title={'Alimentație publică'} />
                 <CarouselUnit title={'Comerț'} />
