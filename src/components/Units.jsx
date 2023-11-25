@@ -31,93 +31,65 @@ function Units() {
     const myRef12 = React.useRef(null);
     const myRef13 = React.useRef(null);
 
-    useEffect(() => {
-        setTimeout(() => {
-            switch (selectedUnit) {
-                case 'Alimentație publică':
-                    myRef1.current.scrollIntoView({
-                        block: 'end',
-                        inline: 'nearest',
-                    });
-                    break;
-                case 'Comerț (Produse Alimentare)':
-                    myRef2.current.scrollIntoView({
-                        block: 'end',
-                        inline: 'nearest',
-                    });
-                    break;
-                case 'Depozitare, Comerț cu ridicata':
-                    myRef3.current.scrollIntoView({
-                        block: 'end',
-                        inline: 'nearest',
-                    });
-                    break;
-                case 'Depozitare, Procesare, Comerț miere':
-                    myRef4.current.scrollIntoView({
-                        block: 'end',
-                        inline: 'nearest',
-                    });
-                    break;
-                case 'Panificație':
-                    console.log('PANIFICATIE');
-                    myRef5.current.scrollIntoView({
-                        block: 'end',
-                        inline: 'nearest',
-                    });
-                    break;
-                case 'Patiserie':
-                    myRef6.current.scrollIntoView({
-                        block: 'end',
-                        inline: 'nearest',
-                    });
-                    break;
-                case 'Cofetărie':
-                    myRef7.current.scrollIntoView({
-                        block: 'end',
-                        inline: 'nearest',
-                    });
-                    break;
-                case 'Abatorizare a animalelor/păsărilor':
-                    myRef8.current.scrollIntoView({
-                        block: 'end',
-                        inline: 'nearest',
-                    });
-                    break;
-                case 'Procesare carne':
-                    myRef9.current.scrollIntoView({
-                        block: 'end',
-                        inline: 'nearest',
-                    });
-                    break;
-                case 'Procesare peste':
-                    myRef10.current.scrollIntoView({
-                        block: 'end',
-                        inline: 'nearest',
-                    });
-                    break;
-                case 'Procesare lapte':
-                    myRef11.current.scrollIntoView({
-                        block: 'end',
-                        inline: 'nearest',
-                    });
-                    break;
-                case 'Gospodării de creștere a animalelor agricole':
-                    myRef12.current.scrollIntoView({
-                        block: 'end',
-                        inline: 'nearest',
-                    });
-                    break;
-                case 'Clinici veterinare/Cabinete veterinare':
-                    myRef13.current.scrollIntoView({
-                        block: 'end',
-                        inline: 'nearest',
-                    });
-                    break;
-                default:
-                    break;
-            }
-        }, 1000);
-    }, [selectedUnit]);
+    const checkIfVisible = (ref) => {
+        const top = ref.current.getBoundingClientRect().top;
+        const bottom = ref.current.getBoundingClientRect().bottom;
+
+        if (!(top >= 0 && bottom <= window.innerHeight)) {
+            ref.current.scrollIntoView({
+                block: 'center',
+                inline: 'nearest',
+            });
+        } else return;
+    };
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         switch (selectedUnit) {
+    //             case 'Alimentație publică':
+    //                 checkIfVisible(myRef1);
+    //                 break;
+    //             case 'Comerț (Produse Alimentare)':
+    //                 checkIfVisible(myRef2);
+    //                 break;
+    //             case 'Depozitare, Comerț cu ridicata':
+    //                 checkIfVisible(myRef3);
+    //                 break;
+    //             case 'Depozitare, Procesare, Comerț miere':
+    //                 checkIfVisible(myRef4);
+    //                 break;
+    //             case 'Panificație':
+    //                 checkIfVisible(myRef5);
+    //                 break;
+    //             case 'Patiserie':
+    //                 checkIfVisible(myRef6);
+    //                 break;
+    //             case 'Cofetărie':
+    //                 checkIfVisible(myRef7);
+    //                 break;
+    //             case 'Abatorizare a animalelor/păsărilor':
+    //                 checkIfVisible(myRef8);
+    //                 break;
+    //             case 'Procesare carne':
+    //                 checkIfVisible(myRef9);
+    //                 break;
+    //             case 'Procesare peste':
+    //                 checkIfVisible(myRef10);
+    //                 break;
+    //             case 'Procesare lapte':
+    //                 checkIfVisible(myRef11);
+    //                 break;
+    //             case 'Gospodării de creștere a animalelor agricole':
+    //                 checkIfVisible(myRef12);
+    //                 break;
+    //             case 'Clinici veterinare/Cabinete veterinare':
+    //                 checkIfVisible(myRef13);
+    //                 break;
+    //             default:
+    //                 break;
+    //         }
+    //     }, 1000);
+    // }, [selectedUnit]);
 
     switch (selectedUnit) {
         case 'Alimentație publică':
@@ -146,7 +118,7 @@ function Units() {
         case 'Procesare carne':
             key = 'procesareCarne';
             break;
-        case 'Procesare peste':
+        case 'Procesare pește':
             key = 'procesarePeste';
             break;
         case 'Procesare lapte':

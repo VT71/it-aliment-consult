@@ -17,6 +17,29 @@ function Unit({ title }) {
 
     let image = null;
 
+    const ref = React.useRef(null);
+
+    const checkIfVisible = () => {
+        const top = ref.current.getBoundingClientRect().top;
+        const bottom = ref.current.getBoundingClientRect().bottom;
+
+        if (!(top >= 0 && bottom <= window.innerHeight)) {
+            ref.current.scrollIntoView({
+                block: 'end',
+                inline: 'nearest',
+            });
+            setTimeout(() => {
+                document.getElementById('units-section').scrollIntoView();
+            }, 1000);
+        } else return;
+    };
+
+    useEffect(() => {
+        if (currentUnit) {
+            checkIfVisible();
+        }
+    }, [selectedUnit]);
+
     switch (title) {
         case 'Comerț (Produse Alimentare)':
             image = 'supermarket.jpg';
@@ -36,6 +59,7 @@ function Unit({ title }) {
 
     return (
         <Box
+            ref={ref}
             sx={{
                 width: '100%',
                 height: '120px',

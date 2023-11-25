@@ -34,7 +34,7 @@ function CarouselUnit({ title }) {
         case 'Alimentație publică':
             clickHandler = () => dispatch(setUnit('Alimentație publică'));
             icon = (
-                <IconButton href={'./#units-section'} onClick={clickHandler}>
+                <IconButton onClick={clickHandler}>
                     <Box
                         sx={{
                             width: '32px',
@@ -52,7 +52,7 @@ function CarouselUnit({ title }) {
             clickHandler = () =>
                 dispatch(setUnit('Comerț (Produse Alimentare)'));
             icon = (
-                <IconButton href={'./#units-section'} onClick={clickHandler}>
+                <IconButton onClick={clickHandler}>
                     <StoreIcon sx={iconStyle} />
                 </IconButton>
             );
@@ -61,7 +61,7 @@ function CarouselUnit({ title }) {
             clickHandler = () =>
                 dispatch(setUnit('Depozitare, Comerț cu ridicata'));
             icon = (
-                <IconButton href={'./#units-section'} onClick={clickHandler}>
+                <IconButton onClick={clickHandler}>
                     <LocalShippingIcon sx={iconStyle} />
                 </IconButton>
             );
@@ -70,7 +70,7 @@ function CarouselUnit({ title }) {
             clickHandler = () =>
                 dispatch(setUnit('Depozitare, Procesare, Comerț miere'));
             icon = (
-                <IconButton href={'./#units-section'} onClick={clickHandler}>
+                <IconButton onClick={clickHandler}>
                     <HiveIcon sx={iconStyle} />
                 </IconButton>
             );
@@ -78,7 +78,7 @@ function CarouselUnit({ title }) {
         case 'Panificație':
             clickHandler = () => dispatch(setUnit('Panificație'));
             icon = (
-                <IconButton href={'./#units-section'} onClick={clickHandler}>
+                <IconButton onClick={clickHandler}>
                     <Box
                         sx={{
                             width: '32px',
@@ -95,7 +95,7 @@ function CarouselUnit({ title }) {
         case 'Patiserie':
             clickHandler = () => dispatch(setUnit('Patiserie'));
             icon = (
-                <IconButton href={'./#units-section'} onClick={clickHandler}>
+                <IconButton onClick={clickHandler}>
                     <BakeryDiningIcon sx={iconStyle} />
                 </IconButton>
             );
@@ -103,7 +103,7 @@ function CarouselUnit({ title }) {
         case 'Cofetărie':
             clickHandler = () => dispatch(setUnit('Cofetărie'));
             icon = (
-                <IconButton href={'./#units-section'} onClick={clickHandler}>
+                <IconButton onClick={clickHandler}>
                     <CakeIcon sx={iconStyle} />
                 </IconButton>
             );
@@ -112,7 +112,7 @@ function CarouselUnit({ title }) {
             clickHandler = () =>
                 dispatch(setUnit('Abatorizare a animalelor/păsărilor'));
             icon = (
-                <IconButton href={'./#units-section'} onClick={clickHandler}>
+                <IconButton onClick={clickHandler}>
                     <FactoryIcon sx={iconStyle} />
                 </IconButton>
             );
@@ -120,15 +120,15 @@ function CarouselUnit({ title }) {
         case 'Procesare Carne':
             clickHandler = () => dispatch(setUnit('Procesare carne'));
             icon = (
-                <IconButton href={'./#units-section'} onClick={clickHandler}>
+                <IconButton onClick={clickHandler}>
                     <AcUnitIcon sx={iconStyle} />
                 </IconButton>
             );
             break;
         case 'Procesare Pește':
-            clickHandler = () => dispatch(setUnit('Procesare peste'));
+            clickHandler = () => dispatch(setUnit('Procesare pește'));
             icon = (
-                <IconButton href={'./#units-section'} onClick={clickHandler}>
+                <IconButton onClick={clickHandler}>
                     <FontAwesomeIcon icon={faFish} style={iconStyle} />
                 </IconButton>
             );
@@ -136,7 +136,7 @@ function CarouselUnit({ title }) {
         case 'Procesare Laptelui':
             clickHandler = () => dispatch(setUnit('Procesare lapte'));
             icon = (
-                <IconButton href={'./#units-section'} onClick={clickHandler}>
+                <IconButton onClick={clickHandler}>
                     <FontAwesomeIcon icon={faCow} style={iconStyle} />
                 </IconButton>
             );
@@ -147,7 +147,7 @@ function CarouselUnit({ title }) {
                     setUnit('Gospodării de creștere a animalelor agricole')
                 );
             icon = (
-                <IconButton href={'./#units-section'} onClick={clickHandler}>
+                <IconButton onClick={clickHandler}>
                     <Box
                         sx={{
                             width: '32px',
@@ -165,7 +165,7 @@ function CarouselUnit({ title }) {
             clickHandler = () =>
                 dispatch(setUnit('Clinici veterinare/Cabinete veterinare'));
             icon = (
-                <IconButton href={'./#units-section'} onClick={clickHandler}>
+                <IconButton onClick={clickHandler}>
                     <Box
                         sx={{
                             width: '32px',
@@ -199,7 +199,6 @@ function CarouselUnit({ title }) {
             <Button
                 variant='text'
                 sx={{ textTransform: 'none' }}
-                href={'./#units-section'}
                 onClick={clickHandler}
             >
                 <Typography sx={titleStyle}>{title}</Typography>
