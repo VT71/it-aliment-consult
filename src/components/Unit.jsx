@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 // redux
@@ -40,7 +40,9 @@ function Unit({ title }) {
                 width: '100%',
                 height: '120px',
                 overflow: 'hidden',
-                marginBottom: '0.3rem',
+                ...(title !== 'Clinici veterinare/Cabinete veterinare' && {
+                    marginBottom: '0.3rem',
+                }),
                 borderRadius: '8px',
                 ...(currentUnit && { borderRadius: '8px 0 0 8px' }),
             }}

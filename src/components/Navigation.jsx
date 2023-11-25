@@ -33,8 +33,6 @@ function Navigation() {
     };
 
     const handleOnScroll = () => {
-        console.log('yoffset', window.scrollY);
-        // change navigationBar background
         if (window.scrollY > 200) {
             document.querySelector('.navigationBar').style.backgroundColor =
                 '#173F73';
