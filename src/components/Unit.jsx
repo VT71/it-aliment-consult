@@ -18,7 +18,6 @@ function Unit({ title }) {
     const changeType = useSelector((state) => state.unit.changeType);
 
     let currentUnit = title && selectedUnit && title === selectedUnit;
-    console.log('title, current unit', title, currentUnit);
 
     let image = null;
 
@@ -41,7 +40,6 @@ function Unit({ title }) {
         // console.log('containerTop', containerTop);
         // console.log('containerBottom', containerBottom);
         let scrollTop = 0;
-        console.log('title', title);
         switch (title) {
             // inscrease scrollTop by 124.8px for each unit
             case 'Alimentație publică':
