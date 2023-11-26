@@ -2,10 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const unitSlice = createSlice({
     name: 'unitSlice',
-    initialState: { unit: '' },
+    initialState: { unit: '', changeType: null },
     reducers: {
         setUnit(state, action) {
-            state.unit = action.payload;
+            state.unit = action.payload.unit;
+            state.changeType = action.payload.changeType;
         },
     },
 });

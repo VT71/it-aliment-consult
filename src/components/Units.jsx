@@ -14,6 +14,7 @@ import descriptions from '../lib/unitDescriptions';
 
 function Units() {
     const selectedUnit = useSelector((state) => state.unit.unit);
+    const changeType = useSelector((state) => state.unit.changeType);
 
     let key = null;
 
@@ -189,6 +190,7 @@ function Units() {
                     }}
                 >
                     <Box
+                        id={'units-scrollable-container'}
                         sx={{
                             width: '30%',
                             height: '100%',
@@ -254,6 +256,7 @@ function Units() {
                             height: '100%',
                             boxSizing: 'border-box',
                             padding: '1rem 2rem',
+                            overflow: 'scroll',
                         }}
                     >
                         <Typography

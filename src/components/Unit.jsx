@@ -12,26 +12,96 @@ function Unit({ title }) {
     const dispatch = useDispatch();
 
     const selectedUnit = useSelector((state) => state.unit.unit);
+    const changeType = useSelector((state) => state.unit.changeType);
 
     let currentUnit = title && selectedUnit && title === selectedUnit;
+    console.log('title, current unit', title, currentUnit);
 
     let image = null;
 
     const ref = React.useRef(null);
 
     const checkIfVisible = () => {
-        const top = ref.current.getBoundingClientRect().top;
-        const bottom = ref.current.getBoundingClientRect().bottom;
+        // const unitTop = ref.current.offsetTop;
+        // const unitBottom = unitTop + ref.current.getBoundingClientRect().height;
 
-        if (!(top >= 0 && bottom <= window.innerHeight)) {
-            ref.current.scrollIntoView({
-                block: 'end',
-                inline: 'nearest',
-            });
-            setTimeout(() => {
-                document.getElementById('units-section').scrollIntoView();
-            }, 1000);
-        } else return;
+        // console.log('unitTop', unitTop);
+        // console.log('unitBottom', unitBottom);
+
+        // const containerTop = document.getElementById(
+        //     'units-scrollable-container'
+        // ).scrollTop;
+        // const containerBottom =
+        //     containerTop +
+        //     document.getElementById('units-scrollable-container').offsetHeight;
+
+        // console.log('containerTop', containerTop);
+        // console.log('containerBottom', containerBottom);
+        let scrollTop = 0;
+        console.log('title', title);
+        switch (title) {
+            // inscrease scrollTop by 124.8px for each unit
+            case 'Alimentație publică':
+                scrollTop = 0;
+                break;
+            case 'Comerț (Produse Alimentare)':
+                scrollTop = 124.8;
+                break;
+            case 'Depozitare, Comerț cu ridicata':
+                scrollTop = 249.6;
+                break;
+            case 'Depozitare, Procesare, Comerț miere':
+                scrollTop = 374.4;
+                break;
+            case 'Abatorizare a animalelor/păsărilor':
+                scrollTop = 499.2;
+                break;
+            case 'Procesare carne':
+                scrollTop = 624;
+                break;
+            case 'Procesare pește':
+                scrollTop = 748.8;
+                break;
+            case 'Procesare lapte':
+                scrollTop = 873.6;
+                break;
+            case 'Panificație':
+                scrollTop = 998.4;
+                break;
+            case 'Patiserie':
+                scrollTop = 1123.2;
+                break;
+            case 'Cofetărie':
+                scrollTop = 1248;
+                break;
+            case 'Gospodării de creștere a animalelor agricole':
+                scrollTop = 1372.8;
+                break;
+            case 'Clinici veterinare/Cabinete veterinare':
+                scrollTop = 1497.6;
+                break;
+            default:
+                break;
+        }
+        if (changeType === 'carousel') {
+            document.getElementById('units-scrollable-container').scrollTop =
+                scrollTop;
+            //     setTimeout(() => {
+            //         document.getElementById('units-section').scrollIntoView();
+            //     }, 1000);
+            //     if (!(unitBottom <= 713 && unitTop >= 218)) {
+            //         console.log('not visible');
+            //         ref.current.scrollIntoView({
+            //             block: 'end',
+            //             inline: 'nearest',
+            //             behavior: 'instant',
+            //         });
+            //     } else {
+            //         return;
+            //     }
+            // } else {
+            //     return;
+        }
     };
 
     useEffect(() => {
@@ -41,6 +111,9 @@ function Unit({ title }) {
     }, [selectedUnit]);
 
     switch (title) {
+        case 'Alimentație publică':
+            image = 'alimentatiePublica.jpg';
+            break;
         case 'Comerț (Produse Alimentare)':
             image = 'supermarket.jpg';
             break;
@@ -50,8 +123,32 @@ function Unit({ title }) {
         case 'Depozitare, Procesare, Comerț miere':
             image = 'honey.jpg';
             break;
-        case 'Unități de panificație':
+        case 'Abatorizare a animalelor/păsărilor':
+            image = 'abatoare.jpg';
+            break;
+        case 'Procesare carne':
+            image = 'procesareCarne.jpg';
+            break;
+        case 'Procesare pește':
+            image = 'procesarePeste.jpg';
+            break;
+        case 'Procesare lapte':
+            image = 'procesareLapte.jpg';
+            break;
+        case 'Panificație':
             image = 'bakery.jpg';
+            break;
+        case 'Patiserie':
+            image = 'patiserie.jpg';
+            break;
+        case 'Cofetărie':
+            image = 'cofetarie.jpg';
+            break;
+        case 'Gospodării de creștere a animalelor agricole':
+            image = 'animaleAgricole.jpg';
+            break;
+        case 'Clinici veterinare/Cabinete veterinare':
+            image = 'veterinar.jpg';
             break;
         default:
             break;
@@ -63,12 +160,32 @@ function Unit({ title }) {
             sx={{
                 width: '100%',
                 height: '120px',
-                overflow: 'hidden',
+                // overflow: 'hidden',
                 ...(title !== 'Clinici veterinare/Cabinete veterinare' && {
-                    marginBottom: '0.3rem',
+                    marginBottom: '4.8px',
                 }),
                 borderRadius: '8px',
                 ...(currentUnit && { borderRadius: '8px 0 0 8px' }),
+                transition:
+                    'scale 0.4s ease-out, background-color 0.4s ease-out',
+                '&:hover': {
+                    scale: '1.02',
+                    // ...(currentUnit && {
+                    //     backgroundColor: 'white',
+                    // }),
+                },
+                '&:active': {
+                    transition:
+                        'scale 0.2s ease-out, background-color 0.2s ease-out',
+                    scale: '1.03',
+                    border: 'none',
+                    outline: 'none',
+                    textDecoration: 'none',
+                    WebkitTapHighlightColor: 'transparent',
+                    ...(currentUnit && {
+                        backgroundColor: '#F6FAFF',
+                    }),
+                },
             }}
         >
             <Box
@@ -87,32 +204,17 @@ function Unit({ title }) {
                     cursor: 'pointer',
                     transition:
                         'scale 0.4s ease-out, background-color 0.4s ease-out',
-                    '&:hover': {
-                        scale: '1.02',
-                        // ...(currentUnit && {
-                        //     backgroundColor: 'white',
-                        // }),
-                    },
-                    '&:active': {
-                        transition:
-                            'scale 0.2s ease-out, background-color 0.2s ease-out',
-                        scale: '1.03',
-                        border: 'none',
-                        outline: 'none',
-                        textDecoration: 'none',
-                        WebkitTapHighlightColor: 'transparent',
-                        ...(currentUnit && {
-                            backgroundColor: '#F6FAFF',
-                        }),
-                    },
                     ...(currentUnit && {
                         backgroundImage: 'none',
                         backgroundColor: '#F6FAFF',
                     }),
+                    borderRadius: '8px',
+                    ...(currentUnit && { borderRadius: '8px 0 0 8px' }),
+                    overflow: 'hidden',
                 }}
                 onClick={() => {
                     if (title) {
-                        dispatch(setUnit(title));
+                        dispatch(setUnit({ unit: title, changeType: 'menu' }));
                     }
                 }}
             >
