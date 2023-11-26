@@ -7,8 +7,11 @@ import { setUnit } from '../store/slices/unitSlice';
 
 // @mui
 import { Box, Typography } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function Unit({ title }) {
+    const max600 = useMediaQuery('(max-width:600px)');
+
     const dispatch = useDispatch();
 
     const selectedUnit = useSelector((state) => state.unit.unit);
@@ -45,47 +48,55 @@ function Unit({ title }) {
                 scrollTop = 0;
                 break;
             case 'Comerț (Produse Alimentare)':
-                scrollTop = 124.8;
+                !max600 ? (scrollTop = 124.8) : (scrollTop = 214.8);
                 break;
             case 'Depozitare, Comerț cu ridicata':
-                scrollTop = 249.6;
+                !max600 ? (scrollTop = 249.6) : (scrollTop = 429.6);
                 break;
             case 'Depozitare, Procesare, Comerț miere':
-                scrollTop = 374.4;
+                !max600 ? (scrollTop = 374.4) : (scrollTop = 644.4);
                 break;
             case 'Abatorizare a animalelor/păsărilor':
-                scrollTop = 499.2;
+                !max600 ? (scrollTop = 499.2) : (scrollTop = 859.2);
                 break;
             case 'Procesare carne':
-                scrollTop = 624;
+                !max600 ? (scrollTop = 624) : (scrollTop = 1074);
                 break;
             case 'Procesare pește':
-                scrollTop = 748.8;
+                !max600 ? (scrollTop = 748.8) : (scrollTop = 1289.8);
                 break;
             case 'Procesare lapte':
-                scrollTop = 873.6;
+                !max600 ? (scrollTop = 873.6) : (scrollTop = 1504.6);
                 break;
             case 'Panificație':
-                scrollTop = 998.4;
+                !max600 ? (scrollTop = 998.4) : (scrollTop = 1719.4);
                 break;
             case 'Patiserie':
-                scrollTop = 1123.2;
+                !max600 ? (scrollTop = 1123.2) : (scrollTop = 1934.2);
                 break;
             case 'Cofetărie':
-                scrollTop = 1248;
+                !max600 ? (scrollTop = 1248) : (scrollTop = 2149);
                 break;
             case 'Gospodării de creștere a animalelor agricole':
-                scrollTop = 1372.8;
+                !max600 ? (scrollTop = 1372.8) : (scrollTop = 2363.8);
                 break;
             case 'Clinici veterinare/Cabinete veterinare':
-                scrollTop = 1497.6;
+                !max600 ? (scrollTop = 1497.6) : (scrollTop = 2578.6);
                 break;
             default:
                 break;
         }
         if (changeType === 'carousel') {
-            document.getElementById('units-scrollable-container').scrollTop =
-                scrollTop;
+            if (max600) {
+                document.getElementById(
+                    'units-scrollable-container'
+                ).scrollLeft = scrollTop;
+            } else {
+                document.getElementById(
+                    'units-scrollable-container'
+                ).scrollTop = scrollTop;
+            }
+
             //     setTimeout(() => {
             //         document.getElementById('units-section').scrollIntoView();
             //     }, 1000);
@@ -186,6 +197,11 @@ function Unit({ title }) {
                         backgroundColor: '#F6FAFF',
                     }),
                 },
+                '@media (max-width: 600px)': {
+                    width: '210px',
+                    height: '100%',
+                    margin: '0',
+                },
             }}
         >
             <Box
@@ -209,7 +225,8 @@ function Unit({ title }) {
                         backgroundColor: '#F6FAFF',
                     }),
                     borderRadius: '8px',
-                    ...(currentUnit && { borderRadius: '8px 0 0 8px' }),
+                    ...(currentUnit && !max600 && { borderRadius: '8px 0 0 8px' }),
+                    ...(currentUnit && max600 && { borderRadius: '8px 8px 0 0' }),
                     overflow: 'hidden',
                 }}
                 onClick={() => {
@@ -253,6 +270,9 @@ function Unit({ title }) {
                                 color: (theme) => theme.palette.primary.light,
                                 textShadow: '0px 0px 10px #e8e8e8',
                             }),
+                            '@media (max-width: 600px)': {
+                                fontSize: '1.1rem',
+                            },
                         }}
                     >
                         {title ? title : ''}

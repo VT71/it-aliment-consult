@@ -140,12 +140,16 @@ function Navigation() {
                             {pages.map((page) => (
                                 <MenuItem
                                     key={page.title}
-                                    href={page.href}
                                     onClick={handleCloseNavMenu}
                                 >
-                                    <Typography textAlign='center'>
-                                        {page.title}
-                                    </Typography>
+                                    <a
+                                        href={page.href}
+                                        style={{ textDecoration: 'none', color: '#021859' }}
+                                    >
+                                        <Typography textAlign='center'>
+                                            {page.title}
+                                        </Typography>
+                                    </a>
                                 </MenuItem>
                             ))}
                         </Menu>

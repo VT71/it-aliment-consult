@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 // @mui
 import { Box, Typography, Card } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 // components
 import Unit from './Unit';
@@ -13,6 +14,8 @@ import { useSelector } from 'react-redux';
 import descriptions from '../lib/unitDescriptions';
 
 function Units() {
+    const max600 = useMediaQuery('(max-width:600px)');
+
     const selectedUnit = useSelector((state) => state.unit.unit);
     const changeType = useSelector((state) => state.unit.changeType);
 
@@ -144,6 +147,7 @@ function Units() {
                 alignItems: 'center',
                 boxSizing: 'border-box',
                 paddingBottom: '3rem',
+                paddingX: '2rem',
             }}
         >
             <Box
@@ -175,6 +179,9 @@ function Units() {
                             color: (theme) => theme.palette.primary.main,
                             fontSize: '3rem',
                             fontWeight: '500',
+                            '@media (max-width: 700px)': { fontSize: '2.6rem' },
+                            '@media (max-width: 600px)': { fontSize: '2.4rem' },
+                            '@media (max-width: 500px)': { fontSize: '2.2rem' },
                         }}
                     >{`Tipuri Unități`}</Typography>
                 </Box>
@@ -187,6 +194,9 @@ function Units() {
                         backgroundColor: '#F6FAFF',
                         display: 'flex',
                         flexDirection: 'row',
+                        '@media (max-width: 600px)': {
+                            flexDirection: 'column',
+                        },
                     }}
                 >
                     <Box
@@ -197,6 +207,13 @@ function Units() {
                             boxSizing: 'border-box',
                             overflow: 'scroll',
                             backgroundColor: 'white',
+                            '@media (max-width: 600px)': {
+                                height: '100px',
+                                width: '100%',
+                                display: 'flex',
+                                flexDirection: 'row',
+                                columnGap: '4.8px',
+                            },
                         }}
                     >
                         <Box ref={myRef1}>
@@ -257,6 +274,11 @@ function Units() {
                             boxSizing: 'border-box',
                             padding: '1rem 2rem',
                             overflow: 'scroll',
+                            '@media (max-width: 600px)': {
+                                height: '394px',
+                                width: '100%',
+                                padding: '1rem 0.5rem 0 0'
+                            },
                         }}
                     >
                         <Typography
@@ -264,6 +286,8 @@ function Units() {
                                 fontSize: '1.6rem',
                                 fontWeight: 500,
                                 marginBottom: '1.2rem',
+                                paddingX: '1rem',
+                                ...(max600 && { textAlign: 'center', fontSize: '1.5rem' }),
                             }}
                         >
                             {selectedUnit ? selectedUnit : ''}

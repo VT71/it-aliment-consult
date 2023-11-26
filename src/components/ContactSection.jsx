@@ -75,8 +75,12 @@ function ContactSection() {
                             icon={
                                 <EmailIcon
                                     sx={{
-                                        color: '#97A626',
+                                        fill: '#97A626',
                                         fontSize: '1.85rem',
+                                        transition: 'all 0.3s ease-in-out',
+                                        ':hover': {
+                                            fill: '#FEFFFA',
+                                        },
                                     }}
                                 />
                             }

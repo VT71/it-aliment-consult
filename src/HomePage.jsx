@@ -57,10 +57,19 @@ function HomePage() {
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    paddingX: '1rem'
                 }}
             >
                 <Typography
-                    sx={{ fontSize: '4rem', fontWeight: '500', color: 'white' }}
+                    sx={{
+                        fontSize: '4rem',
+                        fontWeight: '500',
+                        color: 'white',
+                        textAlign: 'center',
+                        '@media (max-width: 900px)': {fontSize: '3rem',},
+                        '@media (max-width: 650px)': {fontSize: '2.4rem',},
+                         '@media (max-width: 450px)': {fontSize: '2rem',},
+                    }}
                 >{`IT ALIMENT CONSULT`}</Typography>
                 <Typography
                     sx={{
@@ -68,9 +77,13 @@ function HomePage() {
                         fontWeight: '400',
                         color: 'white',
                         marginBottom: '4rem',
+                        textAlign: 'center',
+                        '@media (max-width: 900px)': {fontSize: '1.5rem',},
+                        '@media (max-width: 650px)': {fontSize: '1.3rem',},
+                        '@media (max-width: 450px)': {fontSize: '1.1rem',},
                     }}
                 >{`Suport consultativ în domeniul sanitar-veterinar și siguranței alimentelor`}</Typography>
-                <Box 
+                <Box
                     sx={{
                         position: 'absolute',
                         bottom: '20px',

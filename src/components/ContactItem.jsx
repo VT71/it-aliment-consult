@@ -1,7 +1,7 @@
 import React from 'react';
 
 // @mui
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, IconButton } from '@mui/material';
 
 function ContactItem({ icon, text }) {
     return (
@@ -10,13 +10,30 @@ function ContactItem({ icon, text }) {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                rowGap: '0.6rem'
+                rowGap: '0.6rem',
             }}
         >
-            {icon}
-            <Typography sx={{ color: '#FEFFFA'}}>
-                {text}
-            </Typography>
+            {text === 'ion.toma.asv@gmail.com' ? (
+                <IconButton href='mailto: ion.toma.asv@gmail.com'>
+                    {icon}
+                </IconButton>
+            ) : (
+                icon
+            )}
+            {text === 'ion.toma.asv@gmail.com' ? (
+                <a href='mailto: ion.toma.asv@gmail.com'>
+                    <Typography
+                        sx={{
+                            color: '#FEFFFA',
+                            ':hover': { color: '#97A626' },
+                        }}
+                    >
+                        {text}
+                    </Typography>
+                </a>
+            ) : (
+                <Typography sx={{ color: '#FEFFFA' }}>{text}</Typography>
+            )}
         </Box>
     );
 }
