@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const unitSlice = createSlice({
     name: 'unitSlice',
-    initialState: { unit: '', changeType: null },
+    initialState: { unit: 'Alimentație publică', changeType: null },
     reducers: {
         setUnit(state, action) {
             state.unit = action.payload.unit;

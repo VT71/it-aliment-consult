@@ -46,9 +46,24 @@ function LaboratoryServices() {
                         }}
                     >{`Servicii Laborator`}</Typography>
                 </Box>
-                <LaboratoryService type={'pasari'} />
-                <LaboratoryService type={'rumegatoare'} />
-                <LaboratoryService type={'suine'} />
+                <Box
+                    sx={{
+                        width: '100%',
+                        display: 'flex',
+                        flexDirection: 'row',
+                        flexWrap: 'wrap',
+                        alignItems: 'start',
+                        justifyContent: 'center',
+                        columnGap: '3rem',
+                        rowGap: '2rem',
+                    }}
+                >
+                    <LaboratoryService type={'animaleCompanie'} />
+                    <LaboratoryService type={'pasari'} />
+                    <LaboratoryService type={'suine'} />
+                    <LaboratoryService type={'rumegatoare'} />
+                    <LaboratoryService type={'furajeApa'} />
+                </Box>
             </Box>
         </Box>
     );
