@@ -48,6 +48,9 @@ function ContactSection() {
                             color: '#FEFFFA',
                             fontSize: '3rem',
                             fontWeight: '500',
+                            '@media (max-width: 700px)': { fontSize: '2.6rem' },
+                            '@media (max-width: 600px)': { fontSize: '2.4rem' },
+                            '@media (max-width: 500px)': { fontSize: '2.2rem' },
                         }}
                     >{`Contacte`}</Typography>
                     <Box
@@ -58,6 +61,10 @@ function ContactSection() {
                             justifyContent: 'center',
                             alignItems: 'center',
                             marginTop: '1.5rem',
+                            boxSizing: 'border-box',
+                            paddingX: '2rem',
+                            flexWrap: 'wrap',
+                            rowGap: '1rem',
                         }}
                     >
                         <ContactItem

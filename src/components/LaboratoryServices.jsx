@@ -13,6 +13,8 @@ function LaboratoryServices() {
                 flexDirection: 'column',
                 alignItems: 'center',
                 backgroundColor: '#F6FAFF',
+                boxSizing: 'border-box',
+                paddingX: '2rem',
             }}
         >
             <Box
@@ -46,6 +48,9 @@ function LaboratoryServices() {
                             color: (theme) => theme.palette.primary.main,
                             fontSize: '3rem',
                             fontWeight: '500',
+                            '@media (max-width: 700px)': { fontSize: '2.6rem' },
+                            '@media (max-width: 600px)': { fontSize: '2.4rem' },
+                            '@media (max-width: 500px)': { fontSize: '2.2rem' },
                         }}
                     >{`Servicii Laborator`}</Typography>
                 </Box>

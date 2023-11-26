@@ -1,8 +1,14 @@
 import * as React from 'react';
+
+// @mui
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
 import Modal from '@mui/material/Modal';
+
+// icons
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 const style = {
     position: 'absolute',
@@ -16,6 +22,7 @@ const style = {
     border: '2px solid rgb(23, 63, 115)',
     boxShadow: 24,
     p: 4,
+    paddingY: 2,
     borderRadius: '8px',
     overflowY: 'scroll',
 };
@@ -81,6 +88,21 @@ export default function ImageModal({ type }) {
                 aria-describedby='modal-modal-description'
             >
                 <Box sx={style}>
+                    <Box
+                        sx={{
+                            width: '100%',
+                            display: 'flex',
+                            justifyContent: 'end',
+                        }}
+                    >
+                        <IconButton
+                            onClick={() => {
+                                handleClose();
+                            }}
+                        >
+                            <CloseRoundedIcon sx={{ fontSize: '1.8rem' }} />
+                        </IconButton>
+                    </Box>
                     <Typography
                         sx={{
                             color: (theme) => theme.palette.primary.light,
