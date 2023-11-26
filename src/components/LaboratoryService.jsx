@@ -128,17 +128,19 @@ function LaboratoryService({ type }) {
                         ))}
                 </Box>
                 <Box>
-                    <ArrowBackIosRoundedIcon
-                        sx={{
-                            transform: 'rotate(270deg)',
-                            marginTop: '0.5rem',
-                            cursor: 'pointer',
-                            ':hover': {
-                                color: '#97A626',
-                            },
-                        }}
-                        onClick={() => (myRef.current.scrollTop += 217)}
-                    />
+                    {type !== 'furajeApa' && (
+                        <ArrowBackIosRoundedIcon
+                            sx={{
+                                transform: 'rotate(270deg)',
+                                marginTop: '0.5rem',
+                                cursor: 'pointer',
+                                ':hover': {
+                                    color: '#97A626',
+                                },
+                            }}
+                            onClick={() => (myRef.current.scrollTop += 217)}
+                        />
+                    )}
                 </Box>
                 <ImageModal type={type} />
             </Box>

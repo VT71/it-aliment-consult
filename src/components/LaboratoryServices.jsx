@@ -7,7 +7,6 @@ import LaboratoryService from './LaboratoryService';
 function LaboratoryServices() {
     return (
         <Box
-            id={'laboratory-section'}
             sx={{
                 width: '100%',
                 display: 'flex',
@@ -16,6 +15,10 @@ function LaboratoryServices() {
                 backgroundColor: '#F6FAFF',
             }}
         >
+            <Box
+                id={'laboratory-section'}
+                sx={{ position: 'relative', top: '-50px' }}
+            ></Box>
             <Box
                 sx={{
                     display: 'flex',

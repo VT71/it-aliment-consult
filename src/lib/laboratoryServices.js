@@ -59,11 +59,9 @@ const servicesInfo = {
     furajeApa: {
         title: 'Analize Furaje/Apă',
         tests: [
-            'Examene fizico - chimice (furaj)',
+            'Examene fizico - chimice (furaj/apă)',
             'Examene toxicologice - micotoxine',
-            'Examene bacteriologice (furaj)',
-            'Examene fizico - chimice (apă)',
-            'Examene bacteriologice (apă)',
+            'Examene bacteriologice (furaj/apă)',
         ],
     },
 };
