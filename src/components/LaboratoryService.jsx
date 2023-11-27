@@ -110,7 +110,7 @@ function LaboratoryService({ type }) {
                         alignItems: 'center',
                         rowGap: '1.2rem',
                         marginTop: '1.2rem',
-                        maxHeight: '217px',
+                        height: '217px',
                         overflowY: 'auto',
                     }}
                 >

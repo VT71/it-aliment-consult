@@ -2,6 +2,7 @@ import React from 'react';
 
 // @mui
 import { Box, Typography } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 // components
 import Navigation from './components/Navigation';
@@ -12,6 +13,8 @@ import Units from './components/Units';
 import ContactSection from './components/ContactSection';
 
 function HomePage() {
+    const max600 = useMediaQuery('(max-width:600px)');
+
     return (
         <Box
             sx={{
@@ -57,7 +60,7 @@ function HomePage() {
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    paddingX: '1rem'
+                    paddingX: '1rem',
                 }}
             >
                 <Typography
@@ -66,9 +69,9 @@ function HomePage() {
                         fontWeight: '500',
                         color: 'white',
                         textAlign: 'center',
-                        '@media (max-width: 900px)': {fontSize: '3rem',},
-                        '@media (max-width: 650px)': {fontSize: '2.4rem',},
-                         '@media (max-width: 450px)': {fontSize: '2rem',},
+                        '@media (max-width: 900px)': { fontSize: '3rem' },
+                        '@media (max-width: 650px)': { fontSize: '2.6rem' },
+                        '@media (max-width: 450px)': { fontSize: '2.4rem' },
                     }}
                 >{`IT ALIMENT CONSULT`}</Typography>
                 <Typography
@@ -77,10 +80,11 @@ function HomePage() {
                         fontWeight: '400',
                         color: 'white',
                         marginBottom: '4rem',
+                        ...(max600 && { marginBottom: '9rem' }),
                         textAlign: 'center',
-                        '@media (max-width: 900px)': {fontSize: '1.5rem',},
-                        '@media (max-width: 650px)': {fontSize: '1.3rem',},
-                        '@media (max-width: 450px)': {fontSize: '1.1rem',},
+                        '@media (max-width: 900px)': { fontSize: '1.5rem' },
+                        '@media (max-width: 650px)': { fontSize: '1.3rem' },
+                        '@media (max-width: 450px)': { fontSize: '1.1rem' },
                     }}
                 >{`Suport consultativ în domeniul sanitar-veterinar și siguranței alimentelor`}</Typography>
                 <Box

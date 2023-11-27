@@ -64,17 +64,17 @@ export default function ImageModal({ type }) {
         <div>
             <Box
                 sx={{
-                    wdith: '100%',
+                    width: '100%',
                     display: 'flex',
                     justifyContent: 'center',
+                    marginTop: '1rem',
+                    ...(type === 'furajeApa' && {marginTop: '52px'})
                 }}
             >
                 <Button
                     variant={'contained'}
                     onClick={handleOpen}
                     sx={{
-                        position: 'absolute',
-                        bottom: '0.8rem',
                         backgroundColor: 'rgb(23, 63, 115)',
                     }}
                 >
